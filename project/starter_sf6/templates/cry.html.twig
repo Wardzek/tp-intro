@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <body class="" style="background-color: white">
+    <div class="container d-flex flex-column align-items-center">
+        <img id="cat" class="col-8" src="https://i.kym-cdn.com/entries/icons/original/000/026/489/crying.jpg">
+
+        <h3 class="text-decoration-underline">utilité du dossier vendor/</h3>
+        <p>C'est le dossier qui contient toutes les librairies utilisées par Symfony.
+            Il est généré par Composer à l'installation.
+            Comme nous l'avons vu, c'est Composer qui permet d'installer toutes les librairies nécessaires.</p>
+
+        <h3 class="text-decoration-underline">utilité du dossier public/.</h3>
+        <p>C’est le seul dossier accessible par la requête client.
+            C’est ici que se trouve ce qu’on appelle le point
+            d’entrée de l’application, le fameux fichier
+            index.php.localhost:8000/test, n’accèdent qu’à ce fichier, qui transmettra
+            par la suite l’action du contrôleur à exécuter.</p>
+
+        <div id="q3" class="card" style="background-color: blue">
+            <h3 style="color: lightgreen">Question 3</h3>
+            <h3 style="color: yellow; font-size: 32px;">Quel fichier dois-je modifier pour configurer les identifiants
+                de bases de données afin que Symfony puisse accéder à la Base de données ?</h3>
+            <p style="color: red; font-size: 24px;">Reponse : fichier .env</p>
+        </div>
+        <br>
+        <div id="q5" class="card">
+            <h3 style="color: lightgreen">Question 5</h3>
+            <h3 style="color: purple; font-size: 32px;">A quoi sert le fichier composer.json qui se trouve à la racine du projet ?</h3>
+            <p style="color: red; font-size: 24px;">Reponse : Ce fichier stocke toutes les dépendances d'un projet, sans avoir à physiquement les installer dans le répertoire vendor/ Example : bootstrap, symfony, yarn etc</p>
+        </div>
+
+
+    </div>
+    <div id="testdiv" style="height: 50px;width: 50px;background-color: blue"></div>
+    <button id="buttondiv">Press</button>
+    <script>
+        document.getElementById('buttondiv').addEventListener('click', e=>{
+            document.getElementById('testdiv').style.backgroundColor = 'pink';
+        })
+    </script>
+    </body>
+
+
+{% endblock %}
